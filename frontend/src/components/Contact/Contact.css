@@ -12,3 +12,47 @@
     animation: toastSlideIn 0.5s ease-out;
   }
   
+
+  /* Add any global styles or modern styling here */
+
+/* Update the section background color and font styles */
+body {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.section {
+  background-color: #fff;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+/* Update the button style to make it more modern and interactive */
+button {
+  background-color: #4a6eff;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #3548aa;
+}
+
+/* Add some spacing and border-radius to the form elements */
+input[type="text"],
+input[type="email"],
+textarea {
+  border-radius: 5px;
+}
+
+/* Add responsiveness for different screen sizes */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}

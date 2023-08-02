@@ -125,7 +125,7 @@ const StationDetails = () => {
           <div class="container px-5 py-24 mx-auto">
             <div class="flex flex-col text-center w-full mb-12">
               <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-                Master Cleanse Reliac Heirloom
+                Book this EV now!🚗
               </h1>
               <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
                 Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
@@ -170,42 +170,40 @@ const StationDetails = () => {
         </section>
       </section>
 
-      <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
-              Amount Payable
-            </h1>
-            <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">
-              Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-              gentrify, subway tile poke farm-to-table.
-            </p>
+
+
+      <section class="bg-gradient-to-b bg-green-300  text-white py-24">
+  <div class="container px-5 mx-auto">
+    <div class="flex flex-col items-center">
+      <h1 class="text-4xl font-bold mb-4">Amount Payable</h1>
+      <p class="lg:w-2/3 text-lg leading-relaxed text-gray-800 text-center">
+        Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table.
+      </p>
+    </div>
+    <div class="flex flex-wrap mt-16">
+      <div class="w-full md:w-1/4 px-4 mb-4">
+        <div class="border border-gray-200 p-6 rounded-lg bg-white">
+          <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-6 h-6"
+              viewBox="0 0 24 24"
+            >
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
           </div>
-          <div class="flex flex-wrap -m-4">
-            <div class="xl:w-full md:w-1/4 p-4">
-              <div class="border border-gray-200 p-6 rounded-lg">
-                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    class="w-6 h-6"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                  </svg>
-                </div>
-                <h2 class="text-lg text-gray-900 font-medium title-font mb-2">
-                  Amount in Indian Rs
-                </h2>
-                <p class="leading-relaxed text-base">{payable}</p>
-              </div>
-            </div>
-          </div>
+          <h2 class="text-xl font-bold mb-2 text-gray-900">Amount in Indian Rs</h2>
+          <p class="leading-relaxed text-base text-gray-700">{payable}</p>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
     </>
   );
 };

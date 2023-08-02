@@ -96,26 +96,55 @@ const Reserve = () => {
             {evdetails.map((item) =>
               searched.includes(item.id) == 1 ? (
                 <NavLink to={`/${item.id}`} className="m-2">
-                  <div class="bg-gray-100 p-4 rounded-lg">
-                    <img
-                      class="h-40 rounded w-full object-cover object-center mb-6"
-                      src={item.image}
-                      alt="content"
-                    />
-                    <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">
-                      ID: {item.id}
-                    </h3>
-                    <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">
-                      Status: {item.status}
-                    </h3>
-                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                      ₹ {item.price} / min
-                    </h2>
-                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                      {item.ev_name}
-                    </h2>
-                    <p class="leading-relaxed text-base">{item.address}</p>
-                  </div>
+                  {item.status == "available" && (
+                    <div class="bg-green-200 p-4 rounded-lg transform transition duration-300 hover:scale-110">
+                      <img
+                        class="h-40 rounded w-full object-cover object-center mb-6"
+                        src={item.image}
+                        alt="content"
+                      />
+                      <div class="bg-green-200 p-4 rounded-lg transform transition duration-300 hover:scale-110">
+                        <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">
+                          ID: {item.id}
+                        </h3>
+                        <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">
+                          Status: {item.status}
+                        </h3>
+                        <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
+                          ₹ {item.price} / min
+                        </h2>
+                        <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
+                          {item.ev_name}
+                        </h2>
+                        <p class="leading-relaxed text-base">{item.address}</p>
+                      </div>
+                    </div>
+                  )}
+
+                  {item.status != "available" && (
+                    <div class="bg-red-200 p-4 rounded-lg transform transition duration-300 hover:scale-110">
+                      <img
+                        class="h-40 rounded w-full object-cover object-center mb-6"
+                        src={item.image}
+                        alt="content"
+                      />
+                      <div class="bg-red-200 p-4 rounded-lg transform transition duration-300 hover:scale-110">
+                        <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">
+                          ID: {item.id}
+                        </h3>
+                        <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">
+                          Status: {item.status}
+                        </h3>
+                        <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
+                          ₹ {item.price} / min
+                        </h2>
+                        <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
+                          {item.ev_name}
+                        </h2>
+                        <p class="leading-relaxed text-base">{item.address}</p>
+                      </div>
+                    </div>
+                  )}
                 </NavLink>
               ) : null
             )}
@@ -143,27 +172,53 @@ const Reserve = () => {
           <div class="flex flex-wrap -m-4">
             {evdetails.map((item) => (
               <NavLink to={`/${item.id}`} className="m-2">
-                <div class="bg-gray-100 p-4 rounded-lg ">
-                  <img
-                    class="h-40 rounded w-full object-cover object-center mb-6"
-                    src={item.image}
-                    alt="content"
-                  />
-                  <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">
-                    {item.id}
-                  </h3>
-                  <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">
-                    {item.status}
-                  </h3>
-                  <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                    ₹ {item.price} / min
-                  </h2>
-                  <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
-                    {item.ev_name}
-                  </h2>
+                {item.status == "available" && (
+                  <div class="bg-green-200 p-4 rounded-lg transform transition duration-300 hover:scale-110">
+                    <img
+                      class="h-40 rounded w-full object-cover object-center mb-6"
+                      src={item.image}
+                      alt="content"
+                    />
+                    <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">
+                      {item.id}
+                    </h3>
+                    <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">
+                      {item.status}
+                    </h3>
+                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
+                      ₹ {item.price} / min
+                    </h2>
+                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
+                      {item.ev_name}
+                    </h2>
 
-                  <p class="leading-relaxed text-base">{item.address}</p>
-                </div>
+                    <p class="leading-relaxed text-base">{item.address}</p>
+                  </div>
+                )}
+
+                {item.status != "available" && (
+                  <div class="bg-red-200 p-4 rounded-lg transform transition duration-300 hover:scale-110">
+                    <img
+                      class="h-40 rounded w-full object-cover object-center mb-6"
+                      src={item.image}
+                      alt="content"
+                    />
+                    <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">
+                      {item.id}
+                    </h3>
+                    <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">
+                      {item.status}
+                    </h3>
+                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
+                      ₹ {item.price} / min
+                    </h2>
+                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
+                      {item.ev_name}
+                    </h2>
+
+                    <p class="leading-relaxed text-base">{item.address}</p>
+                  </div>
+                )}
               </NavLink>
             ))}
           </div>

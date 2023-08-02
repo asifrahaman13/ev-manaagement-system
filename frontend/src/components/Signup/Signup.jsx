@@ -34,9 +34,9 @@ const Signup = () => {
         email_address: evdetails.email_address,
       });
       if (response.status == 200) {
-        setMessage({msg:"Everything is successfully sent", statuscode:200});
+        setMessage({ msg: "Everything is successfully sent", statuscode: 200 });
       } else {
-        setMessage({msg:"There was a problem asociated.", statuscode:404});
+        setMessage({ msg: "There was a problem asociated.", statuscode: 404 });
       }
     } catch (err) {
       console.log(err);
@@ -59,17 +59,15 @@ const Signup = () => {
       <div className="relative">
         {showToast && <Success message={message} />}
       </div>
+
       <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
-          <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
-            <h1 class="title-font font-medium text-3xl text-gray-900">
-              Singnup here
-            </h1>
-            <p class="leading-relaxed mt-4">
-              Signup to get started to use our amazing services! You will get
-              invaluable experince of Ev management. Your EV management is just
-              a click away!
-            </p>
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <img
+              alt="content"
+              class="object-cover object-center h-full w-full rounded-lg sm:rounded-none md:rounded-md lg:rounded-xl"
+              src="https://uploads-ssl.webflow.com/64b66ad2d48ca7a912ddf3eb/64b66ad2d48ca7a912ddf45f_Group%2011383.png"
+            />
           </div>
           <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
             <h2 class="text-gray-900 text-lg font-medium title-font mb-5">

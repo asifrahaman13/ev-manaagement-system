@@ -27,8 +27,8 @@ const Approve = () => {
           <div class="sm:w-1/2 mb-10 px-4">
             <img
               alt="content"
-              class="object-cover object-center h-full w-full rounded-lg sm:rounded-none md:rounded-md lg:rounded-xl"
-              src="https://etimg.etb2bimg.com/photo/100491331.cms"
+              class="object-cover object-center h-full w-full rounded-lg sm:rounded-none md:rounded-md lg:rounded-x"
+              src="https://uploads-ssl.webflow.com/64b66ad2d48ca7a912ddf3eb/64b66ad2d48ca7a912ddf45d_Group%2011394.png"
             />
           </div>
         </div>
@@ -40,7 +40,7 @@ const Approve = () => {
             <img
               alt="content"
               class="object-cover object-center h-full w-full rounded-lg sm:rounded-none md:rounded-md lg:rounded-xl"
-              src="https://etimg.etb2bimg.com/photo/100491331.cms"
+              src="https://uploads-ssl.webflow.com/64b66ad2d48ca7a912ddf3eb/64b66ad2d48ca7a912ddf45f_Group%2011383.png"
             />
           </div>
           <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
