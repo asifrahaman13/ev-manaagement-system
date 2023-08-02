@@ -78,6 +78,21 @@ const StationDetails = () => {
   return (
     <>
       <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-12">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-purple-500 ">
+              EV Details
+            </h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+              Please check all the EV details here. If you want to reserve this
+              EV kindly enter your username in the next section and hit the
+              start button.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font">
         <div class="container px-5 py-24 mx-auto flex flex-wrap">
           <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
             <img
@@ -89,7 +104,7 @@ const StationDetails = () => {
           <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
             <div class="flex flex-col mb-10 lg:items-start items-center">
               <div class="flex-grow">
-                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">
+                <h2 class="text-purple-500 text-lg title-font font-medium mb-3">
                   Name
                 </h2>
                 <p class="leading-relaxed text-base">{evdetails.ev_name}</p>
@@ -97,15 +112,17 @@ const StationDetails = () => {
             </div>
             <div class="flex flex-col mb-10 lg:items-start items-center">
               <div class="flex-grow">
-                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">
+                <h2 class="text-purple-500  text-lg title-font font-medium mb-3">
                   Price
                 </h2>
-                <p class="leading-relaxed text-base">₹ {evdetails.ev_price} /min</p>
+                <p class="leading-relaxed text-base">
+                  ₹ {evdetails.ev_price} /min
+                </p>
               </div>
             </div>
             <div class="flex flex-col mb-10 lg:items-start items-center">
               <div class="flex-grow">
-                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">
+                <h2 class="text-purple-500 text-lg title-font font-medium mb-3">
                   Address
                 </h2>
                 <p class="leading-relaxed text-base">{evdetails.address}</p>
@@ -113,7 +130,7 @@ const StationDetails = () => {
             </div>
             <div class="flex flex-col mb-10 lg:items-start items-center">
               <div class="flex-grow">
-                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">
+                <h2 class="text-purple-500  text-lg title-font font-medium mb-3">
                   Availability
                 </h2>
                 <p class="leading-relaxed text-base">{evdetails.status}</p>
@@ -124,7 +141,7 @@ const StationDetails = () => {
         <section class="text-gray-600 body-font">
           <div class="container px-5 py-24 mx-auto">
             <div class="flex flex-col text-center w-full mb-12">
-              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-purple-500 ">
                 Book this EV now!🚗
               </h1>
               <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
@@ -170,40 +187,40 @@ const StationDetails = () => {
         </section>
       </section>
 
-
-
       <section class="bg-gradient-to-b bg-green-300  text-white py-24">
-  <div class="container px-5 mx-auto">
-    <div class="flex flex-col items-center">
-      <h1 class="text-4xl font-bold mb-4">Amount Payable</h1>
-      <p class="lg:w-2/3 text-lg leading-relaxed text-gray-800 text-center">
-        Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table.
-      </p>
-    </div>
-    <div class="flex flex-wrap mt-16">
-      <div class="w-full md:w-1/4 px-4 mb-4">
-        <div class="border border-gray-200 p-6 rounded-lg bg-white">
-          <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-            <svg
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              class="w-6 h-6"
-              viewBox="0 0 24 24"
-            >
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-            </svg>
+        <div class="container px-5 mx-auto">
+          <div class="flex flex-col items-center">
+            <h1 class="text-4xl font-bold mb-4">Amount Payable</h1>
+            <p class="lg:w-2/3 text-lg leading-relaxed text-gray-800 text-center">
+              Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
+              gentrify, subway tile poke farm-to-table.
+            </p>
           </div>
-          <h2 class="text-xl font-bold mb-2 text-gray-900">Amount in Indian Rs</h2>
-          <p class="leading-relaxed text-base text-gray-700">{payable}</p>
+          <div class="flex flex-wrap mt-16">
+            <div class="w-full md:w-1/4 px-4 mb-4">
+              <div class="border border-gray-200 p-6 rounded-lg bg-white">
+                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    class="w-6 h-6"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                </div>
+                <h2 class="text-xl font-bold mb-2 text-gray-900">
+                  Amount in Indian Rs
+                </h2>
+                <p class="leading-relaxed text-base text-gray-700">{payable}</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+      </section>
     </>
   );
 };
