@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import Success from "../Sucess/Success";
 
 const StationDetails = () => {
+  const [message, setMessage] = useState({
+    msg: "",
+    statuscode: 0,
+  });
   const [username, setUsername] = useState("");
   const [payable, setPayable] = useState(0);
   const [evdetails, setEvdetails] = useState({
@@ -18,6 +23,16 @@ const StationDetails = () => {
   useEffect(() => {
     getEvDetail(slug);
   }, []);
+
+  const [showToast, setShowToast] = useState(false);
+
+  // Function to show the toast
+  const handleShowToast = () => {
+    setShowToast(true);
+    setTimeout(() => {
+      setShowToast(false);
+    }, 3000); // Hide the toast after 3 seconds (adjust as needed)
+  };
 
   const getEvDetail = async (slug) => {
     try {
@@ -49,10 +64,16 @@ const StationDetails = () => {
         }
       );
       if (response.status == 200) {
+        setMessage({ msg: "Succesfully started your time!", statuscode: 200 });
       } else {
         console.log("Something went wrong");
+        setMessage({ msg: "There was a problem asociated please try again later. Make sure you are singed in", statuscode: 404 });
       }
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+      setMessage({ msg: "There was a problem asociated. Make sure you are signed in", statuscode: 404 });
+    }
+    handleShowToast();
   };
 
   const handleFinish = async (e) => {
@@ -69,14 +90,23 @@ const StationDetails = () => {
       console.log(response.data.amount);
       if (response.status == 200) {
         console.log("Eveetything alright");
+        setMessage({ msg: "Your session is end now", statuscode: 200 });
       } else {
         console.log("Something went wrong");
+        setMessage({ msg: "There was a problem asociated. Make sure you are signed in", statuscode: 404 });
       }
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+      setMessage({ msg: "There was a problem asociated. Make sure you are signed in", statuscode: 404 });
+    }
+    handleShowToast();
   };
 
   return (
     <>
+        <div className="relative">
+        {showToast && <Success message={message} />}
+      </div>
       <section class="text-gray-600 body-font">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-col text-center w-full mb-12">

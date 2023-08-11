@@ -116,7 +116,7 @@ const Reserve = () => {
                         <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
                           {item.ev_name}
                         </h2>
-                        <p class="leading-relaxed text-base">{item.address}</p>
+                        <p class="leading-relaxed text-base">{item.address.substring(0,30)}...</p>
                       </div>
                     </div>
                   )}
@@ -141,7 +141,7 @@ const Reserve = () => {
                         <h2 class="text-lg text-gray-900 font-medium title-font mb-4">
                           {item.ev_name}
                         </h2>
-                        <p class="leading-relaxed text-base">{item.address}</p>
+                        <p class="leading-relaxed text-base">{item.address.substring(0,30)}...</p>
                       </div>
                     </div>
                   )}
@@ -192,7 +192,7 @@ const Reserve = () => {
                       {item.ev_name}
                     </h2>
 
-                    <p class="leading-relaxed text-base">{item.address}</p>
+                    <p class="leading-relaxed text-base">{item.address.substring(0,30)}...</p>
                   </div>
                 )}
 
@@ -216,7 +216,7 @@ const Reserve = () => {
                       {item.ev_name}
                     </h2>
 
-                    <p class="leading-relaxed text-base">{item.address}</p>
+                    <p class="leading-relaxed text-base">{item.address.substring(0,30)}...</p>
                   </div>
                 )}
               </NavLink>

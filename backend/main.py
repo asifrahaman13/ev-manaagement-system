@@ -259,9 +259,14 @@ def deleteEV(EV_id: int):
 @app.post("/startsession/{ev_id}")
 def startSession(ev_id: int, reserve: Reserve):
     with Session(engine) as session:
+        user_signed=select(User.name)
+        user_signed=session.exec(user_signed).all()
+        print("************************************************************************************")
+        if(reserve.name not in user_signed):
+            raise HTTPException(status_code=404, detail="You are not signed in.")
+        print(user_signed)
         is_available = select(EV.status).where(EV.id == ev_id)
         is_available = session.exec(is_available).first()
-        print("is available", is_available)
         if is_available == False:
             raise HTTPException(status_code=404, detail="It is not available")
         statement = select(EV.ev_price).where(EV.id == ev_id)
@@ -292,6 +297,11 @@ def startSession(ev_id: int, reserve: Reserve):
 @app.post("/endsession/{ev_id}")
 def startSession(ev_id: int, reserve: Reserve):
     with Session(engine) as session:
+        user_signed=select(User.name)
+        user_signed=session.exec(user_signed).all()
+        print("************************************************************************************")
+        if(reserve.name not in user_signed):
+            raise HTTPException(status_code=404, detail="You are not signed in.")
         is_available = select(EV.status).where(EV.id == ev_id)
         is_available = session.exec(is_available).first()
         print(reserve.name)

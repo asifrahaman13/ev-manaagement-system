@@ -127,17 +127,17 @@ const Footer = () => {
           >
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
           </svg>
-          <span className="ml-3 text-xl">Your Company Name</span>
+          <span className="ml-3 text-xl">ASTRA</span>
         </NavLink>
         <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">
-          © 2023 Your Company Name —
+          © 2023 astra —
           <a
             href="https://twitter.com/your-twitter-handle"
             rel="noopener noreferrer"
             className="text-gray-600 ml-1"
             target="_blank"
           >
-            @your-twitter-handle
+            @astra2023
           </a>
         </p>
         <div className="flex space-x-2">

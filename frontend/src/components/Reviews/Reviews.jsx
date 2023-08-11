@@ -66,10 +66,10 @@ const Reviews = () => {
                   <path d="M22 12h-4l-3 9-9-24 7 7h4l3 9z"></path>
                 </svg>
               </div>
-              <h2 className="text-gray-900 text-lg font-medium">Sam Karn</h2>
+              <h2 className="text-gray-900 text-lg font-medium">John Wick</h2>
             </div>
             <p className="text-base leading-relaxed">
-              "This charging station is a game-changer for me! As a frequent road tripper, I rely on dependable charging points, and this one never disappoints. It's always in good working condition, and the multiple ports ensure I can charge both my EV and my friend's without any hassle. Thumbs up!"
+              "I definitely got one of the best services from ASTRA. They give quality services. Earlier it was very inconvenitent to find the proper EV aound. Now it is quite easy and at the same time conveninet to find them all due to ASTRA."
             </p>
             <a
               href="#"
@@ -104,10 +104,10 @@ const Reviews = () => {
                   <path d="M22 12h-4l-3 9-9-24 7 7h4l3 9z"></path>
                 </svg>
               </div>
-              <h2 className="text-gray-900 text-lg font-medium">Sam Karn</h2>
+              <h2 className="text-gray-900 text-lg font-medium">Jain Paul</h2>
             </div>
             <p className="text-base leading-relaxed">
-              "This charging station is a game-changer for me! As a frequent road tripper, I rely on dependable charging points, and this one never disappoints. It's always in good working condition, and the multiple ports ensure I can charge both my EV and my friend's without any hassle. Thumbs up!"
+              "In the ever increasing world of power consumption where green energey is exploding we need a proper system to manage the entire ecosystem. Astra are among those organizations which solves the problem to a large scale. "
             </p>
             <a
               href="#"
